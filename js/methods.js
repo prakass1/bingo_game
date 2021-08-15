@@ -2,15 +2,15 @@ function generateRandomInteger(max) {
     return Math.floor(Math.random() * max) + 1;
 }
 
-function generateRandomNumbers(board_length){
+function generateRandomNumbers(board_length) {
     let array = [];
-    while (array.length < board_length){
+    while (array.length < board_length) {
         var random_number = generateRandomInteger(board_length);
-        if (array.indexOf(random_number) == -1){
+        if (array.indexOf(random_number) == -1) {
             array.push(random_number);
         }
     }
-    return array;        
+    return array;
 }
 
 function generateBoard(size) {
@@ -25,12 +25,12 @@ function generateBoard(size) {
         for (let j = 0; j < size; j++) {
             subContent += "<td class='game-cell' id='game-cell-" + i + '-' + j + "'>" + randoms[counter] + "</td>"
             counter += 1;
-            if (j == 4){
+            if (j == 4) {
                 subContent += "</tr>"
             }
         }
         gameContent += subContent;
-        if (i == 4){
+        if (i == 4) {
             gameContent += "</table>"
         }
     }
